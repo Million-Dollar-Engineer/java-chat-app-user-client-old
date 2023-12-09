@@ -51,6 +51,7 @@ public class boxChat extends javax.swing.JFrame {
         });
 
         chatbtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chatbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-chat-30.png"))); // NOI18N
         chatbtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 chatMousePressed(evt);
@@ -58,8 +59,10 @@ public class boxChat extends javax.swing.JFrame {
         });
 
         starbtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        starbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-star-30.png"))); // NOI18N
 
         settingbtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        settingbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-setting-30.png"))); // NOI18N
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 

@@ -1,3 +1,5 @@
+package UI;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -7,12 +9,12 @@
  *
  * @author HP-PC
  */
-public class registerForm extends javax.swing.JFrame {
+public class loginForm extends javax.swing.JFrame {
 
     /**
      * Creates new form loginForm
      */
-    public registerForm() {
+    public loginForm() {
         initComponents();
     }
 
@@ -44,7 +46,7 @@ public class registerForm extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(132, 189, 196));
-        jLabel1.setText("CREATE ACCOUNT");
+        jLabel1.setText("LOG IN");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Username");
@@ -72,7 +74,7 @@ public class registerForm extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(117, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(106, 106, 106))
             .addGroup(jPanel2Layout.createSequentialGroup()

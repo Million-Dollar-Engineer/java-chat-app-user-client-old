@@ -1,3 +1,8 @@
+package UI;
+
+
+import UI.loginForm;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -7,12 +12,12 @@
  *
  * @author HP-PC
  */
-public class loginForm extends javax.swing.JFrame {
+public class registerForm extends javax.swing.JFrame {
 
     /**
      * Creates new form loginForm
      */
-    public loginForm() {
+    public registerForm() {
         initComponents();
     }
 
@@ -37,7 +42,6 @@ public class loginForm extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 500));
 
         jPanel1.setBackground(new java.awt.Color(128, 161, 183));
 
@@ -45,7 +49,7 @@ public class loginForm extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(132, 189, 196));
-        jLabel1.setText("LOG IN");
+        jLabel1.setText("CREATE ACCOUNT");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Username");
@@ -56,7 +60,6 @@ public class loginForm extends javax.swing.JFrame {
         jLabel3.setText("Password");
 
         jPasswordField1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(128, 161, 183)));
-        jPasswordField1.setPreferredSize(new java.awt.Dimension(64, 18));
 
         jButton1.setBackground(new java.awt.Color(128, 161, 183));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -74,7 +77,7 @@ public class loginForm extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(117, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(106, 106, 106))
             .addGroup(jPanel2Layout.createSequentialGroup()

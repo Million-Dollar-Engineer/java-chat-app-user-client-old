@@ -684,10 +684,6 @@ public class boxChat extends javax.swing.JFrame {
         resetColor(chatPanel);
         resetColor(settingPanel);
         resetColor(starPanel);
-        home.setVisible(true);
-        favourite.setVisible(false);
-        setting.setVisible(false);
-        chat.setVisible(false);
 
 
     }//GEN-LAST:event_homeLabelMouseClicked
@@ -697,10 +693,6 @@ public class boxChat extends javax.swing.JFrame {
         resetColor(homePanel);
         resetColor(settingPanel);
         resetColor(starPanel);
-        chat.setVisible(true);
-        favourite.setVisible(false);
-        setting.setVisible(false);
-        home.setVisible(false);
     }//GEN-LAST:event_chatLabelMouseClicked
 
     private void chatLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_chatLabelMousePressed
@@ -713,10 +705,6 @@ public class boxChat extends javax.swing.JFrame {
         resetColor(chatPanel);
         resetColor(settingPanel);
         resetColor(homePanel);
-        favourite.setVisible(true);
-        home.setVisible(false);
-        setting.setVisible(false);
-        chat.setVisible(false);
     }//GEN-LAST:event_starLabelMouseClicked
 
     private void starLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_starLabelMousePressed
@@ -729,10 +717,6 @@ public class boxChat extends javax.swing.JFrame {
         resetColor(chatPanel);
         resetColor(homePanel);
         resetColor(starPanel);
-        setting.setVisible(true);
-        favourite.setVisible(false);
-        home.setVisible(false);
-        chat.setVisible(false);
     }//GEN-LAST:event_settingLabelMouseClicked
 
     private void settingLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabelMousePressed

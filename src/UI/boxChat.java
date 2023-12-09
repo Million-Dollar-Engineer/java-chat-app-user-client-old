@@ -30,11 +30,16 @@ public class boxChat extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        homebtn = new javax.swing.JLabel();
-        chatbtn = new javax.swing.JLabel();
-        starbtn = new javax.swing.JLabel();
-        settingbtn = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        homePanel = new javax.swing.JPanel();
+        homeLabel = new javax.swing.JLabel();
+        chatPanel = new javax.swing.JPanel();
+        chatLabel = new javax.swing.JLabel();
+        starPanel = new javax.swing.JPanel();
+        starLabel = new javax.swing.JLabel();
+        settingPanel = new javax.swing.JPanel();
+        settingLabel = new javax.swing.JLabel();
+        logoutPanel = new javax.swing.JPanel();
+        settingLabel1 = new javax.swing.JLabel();
         boxChat = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
 
@@ -42,54 +47,205 @@ public class boxChat extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(128, 190, 183));
 
-        homebtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        homebtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/home.png"))); // NOI18N
-        homebtn.addMouseListener(new java.awt.event.MouseAdapter() {
+        homePanel.setBackground(new java.awt.Color(128, 161, 183));
+        homePanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        homeLabel.setBackground(new java.awt.Color(204, 255, 204));
+        homeLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        homeLabel.setForeground(new java.awt.Color(255, 255, 255));
+        homeLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        homeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/home.png"))); // NOI18N
+        homeLabel.setText("Home");
+        homeLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeLabelMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                homebtnMousePressed(evt);
+                homeLabelMousePressed(evt);
             }
         });
 
-        chatbtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        chatbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-chat-30.png"))); // NOI18N
-        chatbtn.addMouseListener(new java.awt.event.MouseAdapter() {
+        javax.swing.GroupLayout homePanelLayout = new javax.swing.GroupLayout(homePanel);
+        homePanel.setLayout(homePanelLayout);
+        homePanelLayout.setHorizontalGroup(
+            homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(homePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(homeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        homePanelLayout.setVerticalGroup(
+            homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(homePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(homeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        chatPanel.setBackground(new java.awt.Color(128, 190, 183));
+        chatPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        chatLabel.setBackground(new java.awt.Color(204, 255, 204));
+        chatLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        chatLabel.setForeground(new java.awt.Color(255, 255, 255));
+        chatLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        chatLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-chat-30.png"))); // NOI18N
+        chatLabel.setText("Chat Box");
+        chatLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                chatLabelMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                chatMousePressed(evt);
+                chatLabelMousePressed(evt);
             }
         });
 
-        starbtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        starbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-star-30.png"))); // NOI18N
+        javax.swing.GroupLayout chatPanelLayout = new javax.swing.GroupLayout(chatPanel);
+        chatPanel.setLayout(chatPanelLayout);
+        chatPanelLayout.setHorizontalGroup(
+            chatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(chatPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(chatLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        chatPanelLayout.setVerticalGroup(
+            chatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(chatPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(chatLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-        settingbtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        settingbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-setting-30.png"))); // NOI18N
+        starPanel.setBackground(new java.awt.Color(128, 190, 183));
+        starPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        starLabel.setBackground(new java.awt.Color(128, 190, 183));
+        starLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        starLabel.setForeground(new java.awt.Color(255, 255, 255));
+        starLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        starLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-star-30.png"))); // NOI18N
+        starLabel.setText("Favourite");
+        starLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                starLabelMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                starLabelMousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout starPanelLayout = new javax.swing.GroupLayout(starPanel);
+        starPanel.setLayout(starPanelLayout);
+        starPanelLayout.setHorizontalGroup(
+            starPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(starPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(starLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        starPanelLayout.setVerticalGroup(
+            starPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(starPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(starLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        settingPanel.setBackground(new java.awt.Color(128, 190, 183));
+        settingPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        settingLabel.setBackground(new java.awt.Color(204, 255, 204));
+        settingLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        settingLabel.setForeground(new java.awt.Color(255, 255, 255));
+        settingLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        settingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-setting-30.png"))); // NOI18N
+        settingLabel.setText("Setting");
+        settingLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                settingLabelMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                settingLabelMousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout settingPanelLayout = new javax.swing.GroupLayout(settingPanel);
+        settingPanel.setLayout(settingPanelLayout);
+        settingPanelLayout.setHorizontalGroup(
+            settingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(settingPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(settingLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        settingPanelLayout.setVerticalGroup(
+            settingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(settingPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(settingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        logoutPanel.setBackground(new java.awt.Color(128, 190, 183));
+        logoutPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        settingLabel1.setBackground(new java.awt.Color(204, 255, 204));
+        settingLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        settingLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        settingLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        settingLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-logout-30.png"))); // NOI18N
+        settingLabel1.setText("Logout");
+        settingLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                settingLabel1MouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                settingLabel1MousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout logoutPanelLayout = new javax.swing.GroupLayout(logoutPanel);
+        logoutPanel.setLayout(logoutPanelLayout);
+        logoutPanelLayout.setHorizontalGroup(
+            logoutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(logoutPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(settingLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        logoutPanelLayout.setVerticalGroup(
+            logoutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(logoutPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(settingLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(homebtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(chatbtn, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
-            .addComponent(starbtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
-            .addComponent(settingbtn, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
-            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(homePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(chatPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(starPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(settingPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(logoutPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(107, 107, 107)
-                .addComponent(homebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(chatbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(starbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(settingbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addComponent(homePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(chatPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(starPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(settingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(logoutPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jPanel2.setBackground(new java.awt.Color(128, 161, 183));
@@ -98,11 +254,11 @@ public class boxChat extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 235, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 550, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout boxChatLayout = new javax.swing.GroupLayout(boxChat);
@@ -111,7 +267,7 @@ public class boxChat extends javax.swing.JFrame {
             boxChatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(boxChatLayout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 549, Short.MAX_VALUE))
+                .addGap(0, 500, Short.MAX_VALUE))
         );
         boxChatLayout.setVerticalGroup(
             boxChatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,34 +286,73 @@ public class boxChat extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(boxChat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
 
-    
-    private void chatMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_chatMousePressed
-        setColor(chatbtn);
-        resetColor(starbtn);
-        resetColor(homebtn);
-        resetColor(settingbtn);
-    }//GEN-LAST:event_chatMousePressed
+    private void homeLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeLabelMousePressed
 
-    private void homebtnMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homebtnMousePressed
-        setColor(homebtn);
-        resetColor(starbtn);
-        resetColor(chatbtn);
-        resetColor(settingbtn);
-    }//GEN-LAST:event_homebtnMousePressed
+    }//GEN-LAST:event_homeLabelMousePressed
 
-    void setColor(JLabel label) {
+    private void homeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeLabelMouseClicked
+        setColor(homePanel);
+        resetColor(chatPanel);
+        resetColor(settingPanel);
+        resetColor(starPanel);
+
+    }//GEN-LAST:event_homeLabelMouseClicked
+
+    private void chatLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_chatLabelMouseClicked
+        setColor(chatPanel);
+        resetColor(homePanel);
+        resetColor(settingPanel);
+        resetColor(starPanel);
+    }//GEN-LAST:event_chatLabelMouseClicked
+
+    private void chatLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_chatLabelMousePressed
+
+    }//GEN-LAST:event_chatLabelMousePressed
+
+    private void starLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_starLabelMouseClicked
+        // TODO add your handling code here:
+        setColor(starPanel);
+        resetColor(chatPanel);
+        resetColor(settingPanel);
+        resetColor(homePanel);
+    }//GEN-LAST:event_starLabelMouseClicked
+
+    private void starLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_starLabelMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_starLabelMousePressed
+
+    private void settingLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabelMouseClicked
+        // TODO add your handling code here:
+        setColor(settingPanel);
+        resetColor(chatPanel);
+        resetColor(homePanel);
+        resetColor(starPanel);
+    }//GEN-LAST:event_settingLabelMouseClicked
+
+    private void settingLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabelMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_settingLabelMousePressed
+
+    private void settingLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabel1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_settingLabel1MouseClicked
+
+    private void settingLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabel1MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_settingLabel1MousePressed
+
+    void setColor(JPanel label) {
         label.setBackground(new Color(128, 161, 183));
     }
 
-    void resetColor(JLabel label) {
+    void resetColor(JPanel label) {
         label.setBackground(new Color(128, 190, 183));
     }
 
@@ -200,12 +395,21 @@ public class boxChat extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel boxChat;
-    private javax.swing.JLabel chatbtn;
-    private javax.swing.JLabel homebtn;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel chatLabel;
+    private javax.swing.JPanel chatPanel;
+    private javax.swing.JLabel homeLabel;
+    private javax.swing.JPanel homePanel;
+    private javax.swing.JLabel homebtn1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel settingbtn;
-    private javax.swing.JLabel starbtn;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel logoutPanel;
+    private javax.swing.JLabel settingLabel;
+    private javax.swing.JLabel settingLabel1;
+    private javax.swing.JPanel settingPanel;
+    private javax.swing.JLabel starLabel;
+    private javax.swing.JPanel starPanel;
     // End of variables declaration//GEN-END:variables
 }

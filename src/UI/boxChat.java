@@ -169,7 +169,7 @@ public class boxChat extends javax.swing.JFrame {
         starLabel.setForeground(new java.awt.Color(255, 255, 255));
         starLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         starLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-star-30.png"))); // NOI18N
-        starLabel.setText("Favourite");
+        starLabel.setText("Friend");
         starLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 starLabelMouseClicked(evt);
